@@ -57,7 +57,7 @@ const restaurants = [
            return reviews.filter(x => x.restaurant === args.id).slice(args.offset,args.first+args.offset);
         },
         getRestaurantById: (parent, args) => {
-          return restaurants.filter(x => x.restaurant === args.id)[0];
+          return restaurants.filter(x => x.id === args.id)[0];
        }
     },
 
