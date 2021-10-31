@@ -55,7 +55,10 @@ const restaurants = [
         },
         getReviews: (parent, args) => {
            return reviews.filter(x => x.restaurant === args.id).slice(args.offset,args.first+args.offset);
-        }
+        },
+        getRestaurantById: (parent, args) => {
+          return restaurants.filter(x => x.restaurant === args.id)[0];
+       }
     },
 
     Mutation: {
