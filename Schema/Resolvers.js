@@ -72,7 +72,7 @@ const restaurants = [
       id: 9,
       name: 'Speilsalen',
       desc: 'High-end restaurant i Trondheim',
-      category: 'eksklusiv',
+      category: 'grill',
       price: 3,
       image: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2874&q=80",
   },
@@ -153,8 +153,16 @@ const restaurants = [
           for (let i = 0; i < restaurants.length; i++) {
             const element = restaurants[i];
             if(element.name.toLowerCase().includes(args.search.toLowerCase()) || element.desc.toLowerCase().includes(args.search.toLowerCase())){
-              result.push(element);
+              if(args.category == "alle" || args.category == element.category){
+                result.push(element);
+              }
             } 
+          }
+          if(args.sort == "asc"){
+            result.sort((a, b) => (a.price > b.price) ? 1 : -1)
+          }
+          if(args.sort == "desc"){
+            result.sort((a, b) => (a.price < b.price) ? 1 : -1)
           }
           return result;
         },
