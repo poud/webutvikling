@@ -9,7 +9,8 @@ const restaurants = [
       name: 'Frati',
       desc: 'Frati er en god restaurant',
       image: "https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2874&q=80",
-      price: 3,
+      price: 2,
+      category: "italiensk",
     },
     {
       id: 2,
@@ -17,35 +18,81 @@ const restaurants = [
       desc: "Macern gir deg en opplevelse du har vil glemme",
       image: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80",
       price: 1,
+      category: "amerikansk",
     },
     {
       id: 3,
       name: 'Burger King',
       desc: "BK gir deg en burger, som er god i beruset tilstand.",
       image: "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2940&q=80",
-      price: 2,
+      price: 1,
+      category: "amerikansk",
     },
   ];
   
   const reviews = [
     {
       restaurant: 1,
-      stars: 1,
+      stars: 5,
       name: "arne",
-      comment: "Dette er trash"
-    },
-    {
-      restaurant: 1,
-      stars: 2,
-      name: "arne",
-      comment: "Dette er trash"
+      comment: "Dette er en kjempegod restaurant."
     },
     {
       restaurant: 2,
+      stars: 3,
+      name: "kåre",
+      comment: "Helt oke"
+    },
+    {
+      restaurant: 3,
+      stars: 4,
+      name: "ole gunnar",
+      comment: "Fin stemning og ganske god mat."
+    },
+    {
+      restaurant: 3,
+      stars: 1,
+      name: "kalle",
+      comment: "pappa lager bedre mat. og han klarer ikke steke en grandis engang."
+    },
+    {
+      restaurant: 4,
+      stars: 4,
+      name: "andrea",
+      comment: "godt."
+    },
+    {
+      restaurant: 5,
+      stars: 4,
+      name: "emilie",
+      comment: "god stemning."
+    },
+    {
+      restaurant: 6,
+      stars: 5,
+      name: "ole",
+      comment: "Fin stemning og ganske god mat."
+    },
+    {
+      restaurant: 7,
       stars: 2,
-      name: "arne",
-      comment: "Dette er trash"
-    }
+      name: "anonym",
+      comment: "did not like the food at all."
+    },
+    {
+      restaurant: 8,
+      stars: 3,
+      name: "jack",
+      comment: "helt ok"
+    },
+    {
+      restaurant: 9,
+      stars: 5,
+      name: "bruker123",
+      comment: "God mat."
+    },
+
+    
   ]
 
   const resolvers = {
