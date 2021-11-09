@@ -53,6 +53,16 @@ const restaurants = [
         getRestaurant: (parent,args) => {
           return restaurants.slice(args.offset,args.first+args.offset);
         },
+        searchRestaurant: (parent,args) => {
+          var result = []
+          for (let i = 0; i < restaurants.length; i++) {
+            const element = restaurants[i];
+            if(element.name.toLowerCase().includes(args.search.toLowerCase()) || element.desc.toLowerCase().includes(args.search.toLowerCase())){
+              result.push(element);
+            } 
+          }
+          return result;
+        },
         getReviews: (parent, args) => {
            return reviews.filter(x => x.restaurant === args.id).slice(args.offset,args.first+args.offset);
         },

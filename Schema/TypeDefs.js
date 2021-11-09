@@ -21,6 +21,7 @@ const typeDefs = gql`
 
   type Query {
     getRestaurant(first: Int,offset: Int): [Restaurant],
+    searchRestaurant(search: String): [Restaurant],
     getRestaurantById(first: Int,offset: Int,id: Int): Restaurant,
     getReviews(first: Int,offset: Int,id: Int): [Review]
   }
